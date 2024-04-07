@@ -1,12 +1,16 @@
 controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
-
+  resource:
+    path: ../src/Controller/
+    namespace: App\Controller
+  type: attribute
 
 vuejs:
-    path: '/{fallbackRoute}'
-    controller: App\Controller\VueJsController
-    requirements:
-        fallbackRoute: '.*'
+  path: "/{fallbackRoute}"
+  controller: App\Controller\VueJsController
+  requirements:
+    fallbackRoute: ".*"
+
+search_cards:
+  path: /api/cards/search
+  controller: App\Controller\CardSearchController::search
+  methods: GET

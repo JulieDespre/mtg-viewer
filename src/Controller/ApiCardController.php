@@ -42,4 +42,9 @@ class ApiCardController extends AbstractController
         }
         return $this->json($card);
     }
+
+    function getLoggers(): LoggerInterface
+    {
+        return $this->logger;
+    }
 }

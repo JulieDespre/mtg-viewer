@@ -12,7 +12,8 @@ class ViteAssetExtension extends AbstractExtension
     public function __construct(
         private readonly bool $isDev,
         private readonly string $manifestPath,
-        private array $manifestData = []
+        //rend nullable ? array $manifestData = [], sinon enlève tableau vide
+        private ?array $manifestData = []
     ) {
     }
 
